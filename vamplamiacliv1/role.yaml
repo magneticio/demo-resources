@@ -1,3 +1,4 @@
+name: role1
 permissions:
   project:
     read: True
