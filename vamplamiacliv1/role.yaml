@@ -1,0 +1,12 @@
+name: role1
+permissions:
+  project:
+    read: True
+    write: False
+    delete: False
+    editAccess: False
+  cluster:
+    read: True
+    write: True
+    delete: True
+    editAccess: True
