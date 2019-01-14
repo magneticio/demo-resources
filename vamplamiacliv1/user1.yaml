@@ -1,0 +1,4 @@
+userName: user1
+password: pass1
+roleKeys:
+  - root=root,project=default
