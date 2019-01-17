@@ -1,0 +1,9 @@
+apiVersion: apps/v1
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: sava
+  labels:
+    project: sava
+    cluster: prod
+    vamp-managed: enabled

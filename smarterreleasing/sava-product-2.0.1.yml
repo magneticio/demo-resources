@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sava-product-2.0.1
+  namespace: sava
+  labels:
+    app: sava-product
+spec:
+  selector:
+    matchLabels:
+      app: sava-product
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: sava-product
+        version: 2.0.1
+    spec:
+      containers:
+      - name: sava-product
+        image: vampio/sava-product:2.0.1
+        ports:
+        - containerPort: 8080

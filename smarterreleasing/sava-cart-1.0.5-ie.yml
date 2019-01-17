@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sava-cart-1.0.5-ie
+  namespace: sava
+  labels:
+    app: sava-cart
+spec:
+  selector:
+    matchLabels:
+      app: sava-cart
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: sava-cart
+        version: 1.0.5
+        locale: IE
+    spec:
+      containers:
+      - name: sava-cart
+        image: vampio/sava-cart:1.0.5
+        ports:
+        - containerPort: 3000
+        env:
+        - name: LOCALE
+          value: IE
