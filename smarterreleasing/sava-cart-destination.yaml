@@ -1,0 +1,11 @@
+application: sava-cart
+ports:
+- name: http
+  port: 8080
+  protocol: TCP
+  targetPort: 3000
+subsets:
+  version1:
+    labels:
+      version: 1.0.5
+      locale: IE

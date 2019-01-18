@@ -1,0 +1,12 @@
+exposeInternally: false
+gateways:
+- sava-gateway
+hosts:
+- ie.tutorials.vamp.cloud
+routes:
+- protocol: http
+  weights:
+  - destination: sava-cart-destination
+    port: 8080
+    version: version1
+    weight: 100
