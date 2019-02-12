@@ -4,6 +4,6 @@ kind: Namespace
 metadata:
   name: sava
   labels:
-    project: sava
-    cluster: prod
+    project: default
+    cluster: default
     vamp-managed: enabled

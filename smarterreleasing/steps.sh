@@ -10,8 +10,11 @@ vamp grant --user user1 --role admin -p $PROJECT_NAME
 vamp login --user user1 --password pass1
 vamp bootstrap cluster prod
 kubectl get pods -n vamp-system
+
+# after cluster set up
 kubectl apply -f sava-namespace.yml
 vamp list virtualclusters
+vamp config set -v sava
 kubectl apply -f sava-cart-1.0.5-ie.yml
 vamp create gateway sava-gateway -f ./sava-gateway.yaml
 vamp create destination sava-cart-destination -f ./sava-cart-destination.yaml
